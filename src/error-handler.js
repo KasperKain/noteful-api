@@ -1,7 +1,7 @@
 const { NODE_ENV } = require('./config');
 const logger = require('./logger');
 
-const errorHandler = (error, req, res, next) => {
+const errorHandler = (error, req, res) => {
   let response;
   if (NODE_ENV === 'production') {
     response = { error: { message: 'server error' } };
